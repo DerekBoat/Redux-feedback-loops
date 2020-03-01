@@ -7,7 +7,13 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import logger from 'redux-logger';
 
-
+const feelingReducer = (state = 0, action) => {
+    if(action.type==='PIZZA'){
+        console.log('in feelingReducer', action.payload);
+        return action.payload;
+    }
+return state;
+}
 
 
 
@@ -15,6 +21,7 @@ import logger from 'redux-logger';
 
 const storeInstance = createStore(
     combineReducers({
+        feelingReducer
     }),    
     applyMiddleware(logger)
 );
