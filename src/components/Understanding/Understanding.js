@@ -18,6 +18,7 @@ class Understanding extends Component {
             type: 'UNDERSTANDING',
             payload: this.state.understandingScore
           })
+          this.props.history.push('/Supported');
     }
 
     render() {
