@@ -6,7 +6,7 @@ class ThankYou extends Component {
     handleClick = () => {
         this.props.history.push('/');
     }
-
+//this component just says thankyou and send you to the first page
     render() {
         return (
             <>

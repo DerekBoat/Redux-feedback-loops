@@ -10,7 +10,7 @@ class Review extends Component {
         support: this.props.reduxState.supportedReducer,
         comments: this.props.reduxState.commentReducer
     }
-
+// all the reducer values from redux are brought and put into a local state. 
     handleClick = () => {
         console.log(this.state, 'in the post handle click');
         console.log(this.props.reduxState.feelingReducer);
@@ -25,7 +25,7 @@ class Review extends Component {
         })
         this.props.history.push('/ThankYou');
     }
-
+// handleClick sends the axios post request to the server and changes the page to the thankyou page. 
     render() {
         return (
             <>

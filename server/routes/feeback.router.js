@@ -17,5 +17,5 @@ router.post('/',  (req, res) => {
       res.sendStatus(500);
     });
 });
-
+// the route made for the post request from the server. 
 module.exports = router;

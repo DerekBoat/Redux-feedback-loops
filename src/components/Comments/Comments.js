@@ -21,7 +21,7 @@ class Comments extends Component {
           })
           this.props.history.push('/Review');
         }
-        
+    // the comment is stored with redux and the review page is called
     render() {
         return (
             <>

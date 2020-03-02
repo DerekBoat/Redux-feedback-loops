@@ -27,7 +27,7 @@ class Feeling extends Component {
                 alert('Please Enter 1-5');
             }
         }
-
+//the value is stored sent to the redux reducer and the next page is called
     render() {
         return (
             <>
