@@ -14,14 +14,14 @@ class Comments extends Component {
     }
 
     handleClick = () => {
+        
         this.props.dispatch({
             type: 'COMMENTS',
             payload: this.state.commentString
           })
           this.props.history.push('/Review');
-          
-    }
-
+        }
+        
     render() {
         return (
             <>

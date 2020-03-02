@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 class Review extends Component {
 
     handleClick = () => {
-        // this.props.history.push('/ThankYou');
+        this.props.history.push('/ThankYou');
     }
 
     render() {

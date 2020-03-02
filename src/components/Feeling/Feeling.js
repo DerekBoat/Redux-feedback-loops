@@ -16,12 +16,17 @@ class Feeling extends Component {
     }
 
     handleClick = () => {
+        if(this.state.feelingScore > 0 && this.state.feelingScore <= 5){
         this.props.dispatch({
             type: 'FEELING',
             payload: this.state.feelingScore
           })
         this.props.history.push('/Understanding');
-    }
+        }
+        else{
+                alert('Please Enter 1-5');
+            }
+        }
 
     render() {
         return (
