@@ -18,6 +18,7 @@ class Supported extends Component {
             type: 'SUPPORTED',
             payload: this.state.supportedScore
           })
+          this.props.history.push('/Comments');
     }
 //these two functions take the input and send it to redux and change the route. 
     render() {

@@ -31,7 +31,13 @@ const supportedReducer = (state = 0, action) => {
     return state;
 }
 
-
+const commentReducer = (state = '', action) => {
+    if (action.type === 'COMMENTS') {
+        console.log('in commentReducer', action.payload);
+        return action.payload;
+    }
+    return state;
+}
 
 
 
@@ -39,7 +45,8 @@ const storeInstance = createStore(
     combineReducers({
         feelingReducer,
         understandingReducer,
-        supportedReducer
+        supportedReducer,
+        commentReducer
     }),
     applyMiddleware(logger)
 );
