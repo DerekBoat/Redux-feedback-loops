@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { HashRouter as Link } from 'react-router-dom';
+
 
 
 class Feeling extends Component {
