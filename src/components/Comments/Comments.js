@@ -18,13 +18,14 @@ class Comments extends Component {
             type: 'COMMENTS',
             payload: this.state.commentString
           })
+          this.props.history.push('/Review');
           
     }
 
     render() {
         return (
             <>
-                How well are you understanding the content?
+                Any comments you want to leave?
             <input onChange={this.commentsHandler} type="text" placeholder="comment"/>
                 <button onClick={this.handleClick}>Next</button>
             </>
