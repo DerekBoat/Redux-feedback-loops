@@ -5,19 +5,15 @@ import axios from 'axios';
 class Review extends Component {
 
     state={
-        feeling: 0,
-        understanding: 0,
-        support: 0,
-        comments: ''
+        feeling: this.props.reduxState.feelingReducer,
+        understanding: this.props.reduxState.understandingReducer,
+        support: this.props.reduxState.supportedReducer,
+        comments: this.props.reduxState.commentReducer
     }
 
     handleClick = () => {
-        this.setState({
-            feeling: this.props.reduxState.feelingReducer,
-            understanding: this.props.reduxState.understandingReducer,
-            support: this.props.reduxState.supportedReducer,
-            comments: this.props.reduxState.commentReducer
-        })
+        console.log(this.state, 'in the post handle click');
+        console.log(this.props.reduxState.feelingReducer);
         axios({
             method: 'POST',
             url: '/feedback',
