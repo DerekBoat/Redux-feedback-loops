@@ -1,9 +1,14 @@
-# Project Name
+# Redux Feedback Loop
+This app uses the following technologies,
+Node
+Express
+Redux
+Redux Logger
+Redux Router
+JavaScript
+Sql
 
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
 
 ## Description
 
-Your project description goes here. What problem did you solve? How did you solve it?
-
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+This app allows the a user to provide feedback to Prime Digital Academy. The review data will be stored on a database. 

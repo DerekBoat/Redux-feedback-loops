@@ -39,8 +39,6 @@ const commentReducer = (state = '', action) => {
     return state;
 }
 
-
-
 const storeInstance = createStore(
     combineReducers({
         feelingReducer,
@@ -50,7 +48,6 @@ const storeInstance = createStore(
     }),
     applyMiddleware(logger)
 );
-
 
 ReactDOM.render(<Provider store={storeInstance}><App /></Provider>, document.getElementById('root'));
 registerServiceWorker();
