@@ -14,11 +14,16 @@ class Supported extends Component {
     }
 
     handleClick = () => {
+        if(this.state.supportedScore > 0 && this.state.supportedScore <= 5){
         this.props.dispatch({
             type: 'SUPPORTED',
             payload: this.state.supportedScore
           })
           this.props.history.push('/Comments');
+        }
+        else{
+            alert('Please Enter 1-5');
+        }
     }
 //these two functions take the input and send it to redux and change the route. 
     render() {

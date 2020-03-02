@@ -7,17 +7,14 @@ import Feeling from '../Feeling/Feeling';
 import Understanding from '../Understanding/Understanding';
 import Supported from '../Supported/Supported';
 import Comments from '../Comments/Comments';
-import Review from '../Review/Review'
-
+import Review from '../Review/Review';
+import ThankYou from '../ThankYou/ThankYou';
 
 class App extends Component {
-
 
   componentDidMount = () => {
     console.log('component mounted');
   }
-
-
 
   render() {
     return (
@@ -35,6 +32,7 @@ class App extends Component {
         <Route path='/Supported' component={Supported}></Route>
         <Route path='/Comments' component={Comments}></Route>
         <Route path='/Review' component={Review}></Route>
+        <Route path='/ThankYou' component={ThankYou}></Route>
       </Router>
     </>
     );
