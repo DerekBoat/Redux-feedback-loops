@@ -8,8 +8,15 @@ import { Provider } from 'react-redux';
 import logger from 'redux-logger';
 
 const feelingReducer = (state = 0, action) => {
-    if(action.type==='PIZZA'){
+    if(action.type==='FEELING'){
         console.log('in feelingReducer', action.payload);
+        return action.payload;
+    }
+return state;
+}
+const understandingReducer = (state = 0, action) => {
+    if(action.type==='UNDERSTANDING'){
+        console.log('in understandingReducer', action.payload);
         return action.payload;
     }
 return state;
@@ -21,7 +28,8 @@ return state;
 
 const storeInstance = createStore(
     combineReducers({
-        feelingReducer
+        feelingReducer,
+        understandingReducer
     }),    
     applyMiddleware(logger)
 );

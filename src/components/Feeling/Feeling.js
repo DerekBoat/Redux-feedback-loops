@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { HashRouter as Link } from 'react-router-dom';
+
 
 class Feeling extends Component {
-
     state = {
         feelingScore: 0
     }
+
 
     feelingHandler = (event) => {
         this.setState({
@@ -18,25 +20,20 @@ class Feeling extends Component {
             type: 'FEELING',
             payload: this.state.feelingScore
           })
+        this.props.history.push('/Understanding');
     }
-    // componentDidMount = () => {
-    //     // event.preventDefault();
-    //     // this.getPizza();
-    //     console.log('in Feeling');
-    // }
 
     render() {
         return (
             <>
                 How are you feeling today?
             <input onChange={this.feelingHandler} type="number" placeholder="score"/>
-                <button onClick={this.handleClick}>Next</button>
+            <button onClick={this.handleClick}>Next</button>
+            
             </>
         )
     }
 }
-const putReduxStateOnProps = (reduxState) => ({
-    reduxState
-});
 
-export default connect(putReduxStateOnProps)(Feeling);
+
+export default connect()(Feeling);
